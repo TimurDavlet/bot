@@ -1,0 +1,26 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "bot": "bin/bot.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timazavr/bot.git"
+  },
+  "author": "Timur Davlet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timazavr/bot/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/timazavr/bot#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
