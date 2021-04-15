@@ -4,6 +4,9 @@ install:
 start:
 	node bin/bot.js
 
+database:
+	node bin/show-database.js
+
 publish:
 	npm publish --dry-run
 
