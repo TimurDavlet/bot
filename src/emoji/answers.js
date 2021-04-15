@@ -2,78 +2,71 @@ const joy = 'Рад, что ты в хорошем настроении!';
 const sadness = 'Не грусти!';
 const anger = 'Не злись.';
 
+// eslint-disable-next-line consistent-return
 const newDialogue = (emodji) => {
   // eslint-disable-next-line default-case
   switch (emodji) {
     case 'joy':
-      console.log(joy);
-      break;
+      return joy;
 
     case 'sadness':
-      console.log(sadness);
-      break;
+      return sadness;
 
     case 'anger':
-      console.log(anger);
-      break;
+      return anger;
   }
 };
 
+// eslint-disable-next-line consistent-return
 const previousEmojiJoy = (emodji) => {
   // eslint-disable-next-line default-case
   switch (emodji) {
     case 'joy':
-      console.log('Хорошее настроение, залог продуктивного дня!');
-      break;
+      return 'Хорошее настроение, залог продуктивного дня!';
 
     case 'sadness':
-      console.log('Не грусти! Куда пропало твое настроение?');
-      break;
+      return 'Не грусти! Куда пропало твое настроение?';
 
     case 'anger':
-      console.log('Не злись, лучше улыбаться! Куда пропало твое настроение?');
-      break;
+      return 'Не злись, лучше улыбаться! Куда пропало твое настроение?';
   }
 };
 
+// eslint-disable-next-line consistent-return
 const previousEmojiSadness = (emodji) => {
   // eslint-disable-next-line default-case
   switch (emodji) {
     case 'joy':
-      console.log('Рад, что твое настроение улучшилось! Хорошее настроение, залог продуктивного дня!');
-      break;
+      return 'Рад, что твое настроение улучшилось! Хорошее настроение, залог продуктивного дня!';
 
     case 'sadness':
-      console.log('Ты все еще грустишь.');
-      break;
+      return 'Ты все еще грустишь.';
 
     case 'anger':
-      console.log('Кажется, тебе стало ещё хуже.');
-      break;
+      return 'Кажется, тебе стало ещё хуже.';
   }
 };
 
+// eslint-disable-next-line consistent-return
 const previousEmojiAnger = (emodji) => {
   // eslint-disable-next-line default-case
   switch (emodji) {
     case 'joy':
-      console.log('Рад, что твое настроение улучшилось! Нервные клетки не востанавливаются!');
-      break;
+      return 'Рад, что твое настроение улучшилось! Нервные клетки не востанавливаются!';
 
     case 'sadness':
-      console.log('Злость, грусть. Пора уже улыбнуться!');
-      break;
+      return 'Злость, грусть. Пора уже улыбнуться!';
 
     case 'anger':
-      console.log('Ты все еще злишься.');
-      break;
+      return 'Ты все еще злишься.';
   }
 };
 
 // eslint-disable-next-line consistent-return
 export default (previousEmoji, emotionName) => {
   if (previousEmoji.length === 0) {
-    return `Привет. ${newDialogue(emotionName)}`;
+    const dialog = newDialogue(emotionName);
+    return `Привет. ${dialog}`;
   }
   // eslint-disable-next-line default-case
   switch (previousEmoji) {
